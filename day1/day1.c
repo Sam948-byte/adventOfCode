@@ -16,8 +16,9 @@ int main()
     char buffer[MAX_LENGTH];
 
     while (fgets(buffer, MAX_LENGTH, fp))
-        printf("%s", buffer);
-
+    if(buffer == '\n'){
+        atoi(buffer)
+    }
     // close the file
     fclose(fp);
 
