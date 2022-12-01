@@ -29,12 +29,15 @@ int main()
         printf("\ngreatest value now equals %i", arraySum);
         greatestValue = arraySum;
         arraySum = 0;
+        bzero(array, sizeof(array));
+        printf("the array is now cleared? %i", array[0]);
+        
     }
         i = 0;
     } else{
-    i++;
     array[i] = atoi(buffer);
     arraySum += array[i];
+    i++;
     }
     // close the file
     fclose(fp);
