@@ -23,7 +23,7 @@ int main()
     int array[100];
     int arraySum = 0;
 
-    while (fgets(buffer, MAX_LENGTH, fp))
+    while (fgets(buffer, MAX_LENGTH, fp)){
    if(strcmp(buffer, "\n") == 0){
     if(greatestValue < arraySum){
         printf("\ngreatest value now equals %i", arraySum);
@@ -38,6 +38,7 @@ int main()
     array[i] = atoi(buffer);
     arraySum += array[i];
     i++;
+    }
     }
     // close the file
     fclose(fp);
