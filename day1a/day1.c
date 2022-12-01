@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 int main()
 {
@@ -19,16 +21,24 @@ int main()
     int greatestValue = 0;
     int i = 0;
     int array[100];
+    int arraySum = 0;
 
     while (fgets(buffer, MAX_LENGTH, fp))
+   if(strcmp(buffer, "\n") == 0){
+    if(greatestValue < arraySum){
+        greatestValue = arraySum;
+        arraySum = 0;
+    }
+        i = 0;
+    } else{
     i++;
     array[i] = atoi(buffer);
-    if(buffer == '\n'){
-        
-        i = 0;
+    arraySum += array[i];
     }
     // close the file
     fclose(fp);
+
+printf("%i", greatestValue);
 
     return 0;
 }
