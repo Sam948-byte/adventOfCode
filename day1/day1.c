@@ -16,13 +16,15 @@ int main()
     char buffer[MAX_LENGTH];
 
     // greatest calorie value and the array
-    int greatestValue;
+    int greatestValue = 0;
     int i = 0;
     int array[100];
 
     while (fgets(buffer, MAX_LENGTH, fp))
+    i++;
+    array[i] = atoi(buffer);
     if(buffer == '\n'){
-        atoi(buffer)
+        
         i = 0;
     }
     // close the file
