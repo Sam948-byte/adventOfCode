@@ -26,6 +26,7 @@ int main()
     while (fgets(buffer, MAX_LENGTH, fp))
    if(strcmp(buffer, "\n") == 0){
     if(greatestValue < arraySum){
+        printf("\ngreatest value now equals %i", arraySum);
         greatestValue = arraySum;
         arraySum = 0;
     }
@@ -38,7 +39,7 @@ int main()
     // close the file
     fclose(fp);
 
-printf("%i", greatestValue);
+printf("\nthe greatest value of the array is %i", greatestValue);
 
     return 0;
 }
