@@ -15,9 +15,15 @@ int main()
     const unsigned MAX_LENGTH = 256;
     char buffer[MAX_LENGTH];
 
+    // greatest calorie value and the array
+    int greatestValue;
+    int i = 0;
+    int array[100];
+
     while (fgets(buffer, MAX_LENGTH, fp))
     if(buffer == '\n'){
         atoi(buffer)
+        i = 0;
     }
     // close the file
     fclose(fp);
