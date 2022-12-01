@@ -19,8 +19,6 @@ int main()
 
     // greatest calorie value and the array
     int greatestValue = 0;
-    int i = 0;
-    int array[100];
     int arraySum = 0;
 
     while (fgets(buffer, MAX_LENGTH, fp)){
@@ -29,15 +27,12 @@ int main()
         printf("\ngreatest value now equals %i", arraySum);
         greatestValue = arraySum;
         arraySum = 0;
-        bzero(array, sizeof(array));
-        printf("the array is now cleared? %i", array[0]);
+       
         
     }
-        i = 0;
     } else{
-    array[i] = atoi(buffer);
-    arraySum += array[i];
-    i++;
+
+    arraySum += atoi(buffer);
     }
     }
     // close the file
